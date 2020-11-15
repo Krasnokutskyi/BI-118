@@ -1,0 +1,29 @@
+﻿#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main(void) {
+	int sys;
+	float m, ft, in;
+	
+	cout << "Enter number to choose: \n 0 - Metric system \n 1 - Imperial system \n";
+	cin >> sys;
+	    if (sys == 0){
+         
+		cin >> m; 
+		
+		ft = 3.28084 * m;
+		in = (ft - ((int)ft)) * 12;
+		ft = (int)ft;
+		cout << ft << "'" << in << "\"";
+    }
+    
+    else if (sys == 1){
+        
+        cin >> ft;
+        cin >> in;
+        m = ft * 0.3048+0.0254 * in;
+		cout << m <<"m";
+    }
+	return 0;
+}

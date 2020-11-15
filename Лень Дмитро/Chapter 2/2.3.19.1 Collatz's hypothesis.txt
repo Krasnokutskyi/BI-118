@@ -1,0 +1,26 @@
+﻿#include <iostream>
+using namespace std;
+int main(void) {
+    
+	int c0;
+	cout << "Enter number: ";
+	    cin >> c0;
+	    
+	int count = 0;
+	while(c0 != 1){
+		
+		count++;
+		if(c0 % 2 == 0){
+		    c0 /= 2;
+		}else{
+		    c0 = c0 * 3 + 1;
+		}
+		cout << c0 << endl;
+		
+	}
+	
+	cout << "Next = " << count;
+	
+	return 0;
+
+}
